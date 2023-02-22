@@ -12,3 +12,4 @@ if 0 < 3:
     print("true,block will also be execute")
 else:
     print("If all fails.")
+
