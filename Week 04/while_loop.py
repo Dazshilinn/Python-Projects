@@ -3,7 +3,7 @@ user_choice = input("Enter l to login or q to quit")
 
 def get_user_choice():
     print("Type l to login s to sign up q to quite")
-    user_choice = input("Choose [l/s/q]: ")
+    user_choice = input("Choose [l/s/q]: ").lower()
     if user_choice == "l":
         print("logging you in...")
     elif user_choice == "s":
