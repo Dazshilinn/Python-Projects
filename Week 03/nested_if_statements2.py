@@ -7,7 +7,7 @@ MENU = "l) Login, q) Quit"
 print(MENU)
 valid_username = "Alexander"
 valid_password = "password"
-valid_birthday = "1984"
+valid_birthyear = "1984"
 
 user_choice = input("Choose [l/q]: ")
 
@@ -15,14 +15,11 @@ if user_choice == "l":
     print("logging you in...")
     entered_username = input("Enter you're username: ")
     entered_password = input("Enter you're password: ")
-    entered_birthday = input("Enter you're birthday: ")
-    if entered_username == valid_username and entered_password == valid_password:
+    entered_birthyear = input("Enter you're birth year: ")
+    if entered_username == valid_username and entered_password == valid_password and entered_birthyear == valid_birthyear:
         print("You successfully logged in. ")
-        if entered_birthday == valid_birthday:
-            print("correct")
-        else:
-            print("wrong BD")
-        # "and" instead of "or because and is strict "and" you need it for both password and username "or" is tolerant
+
+        # "and" instead of "or because "and" is strict "and" you need it for both password and username "or" is tolerant
 
     else:
         print("Invalid credentials")
