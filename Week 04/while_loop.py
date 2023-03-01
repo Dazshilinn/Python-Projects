@@ -1,8 +1,9 @@
+MENU = "l) Login, S) Sign up, q) quit"
 user_choice = input("Enter l to login or q to quit")
 
 
 def get_user_choice():
-    print("Type l to login s to sign up q to quite")
+    print(MENU)
     user_choice = input("Choose [l/s/q]: ").lower()
     if user_choice == "l":
         print("logging you in...")
