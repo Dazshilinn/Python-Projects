@@ -3,7 +3,7 @@ cars = ["BMW", "Mercedes", "Ford"]
 for car in cars:
     print("Car:", car)
 # \n for the next printed string to go to the next line
-for time in range(3):
+for time in range(2):
     print("Hello\nHow are you?\nI'm fine")
 # end will cause the print to go horizontal
 for letter in range(10):
