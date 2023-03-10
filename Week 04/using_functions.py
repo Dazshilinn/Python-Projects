@@ -46,7 +46,7 @@ def is_adult(an_age):
 if is_adult(50):
     print("Welcome")
 else:
-    print("Sorry")
+    print("Sorry you're to young")
 
 
 def multiply_by_five(number):
