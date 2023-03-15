@@ -1,4 +1,4 @@
-"""You can the split() method
+"""You can use the split() method
 to extract data based on a seperator (like space)"""
 
 record = "John 0452302453"

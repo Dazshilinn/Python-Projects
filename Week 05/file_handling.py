@@ -34,5 +34,5 @@ print(phonebook_dictionary)
 print("John's phone number is", phonebook_dictionary["Sara"])
 
 for name, phone in phonebook_dictionary.items():
-    print("Name:", name, "-Phone:", phone)
-    print(f"Name: {name:10} Phone: {phone}")
+    # print("Name:", name, "- Phone:", phone)
+    print(f"Name: {name:10s} Phone: {phone}")
