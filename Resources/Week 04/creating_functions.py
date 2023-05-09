@@ -1,12 +1,18 @@
 def greet():
     print("Hello")
 
+
 greet()
+
+
 def get_name_and_greet():
     name = input("Enter your name: ")
     print("Hello", name)
 
+
 get_name_and_greet()
+
+
 def verify_age():
     age = int(input("Enter your age: "))
     if age >= 18:
