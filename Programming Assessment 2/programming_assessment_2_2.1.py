@@ -1,11 +1,11 @@
 import time
 import random
 import string
-
+# the accounts from the accounts.txt file that I need to verify the users
 accounts_dictionary = {"fredsmart1": "12345678", "jrobertson4": "r@=%8(_W=1", "bob101": "1234598",
                        "marcusw": "3#tr@9dw%4}", "popeyedd": "1989eidjce", "junkman00": "p3*(kd8&ld",
                        "sbj2021": "$d5e(ep2(d", "robotman": "7777Spy007"}
-
+# menu for users to login
 MENU = "l) Login, q) Quit"
 
 print(MENU)
@@ -15,7 +15,7 @@ user_choice = input("Choose [l/q]: ")
 if user_choice == "l":
     entered_username = input("Enter you're username:")
     entered_password = input("Enter you're password:")
-    # the accounts_dictionary up till the entered_username is a value that i have given the key
+    # the accounts_dictionary up till the entered_username is a value that I have given the key
     if entered_username in accounts_dictionary and accounts_dictionary[entered_username] == entered_password:
         print("Logging you in. ")
 
