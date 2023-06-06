@@ -50,13 +50,22 @@ elif user_choice == "q":
 elif user_choice == "r":
     new_user = input("Register new username:")
     new_pass = ""
-    print("Would you like to enter a new password (y) or have one generated for you (n)??")
-    use_generate_password = input("y/n?: ").lower
-    if use_generate_password == "y":
+    print("Would you like to enter a new password (1) or have one generated for you (2)?")
+    password_option = input("1 or 2?: ")
+    if password_option == "1":
+        new_pass= input("Enter your custom password: ")
+    elif password_option == "2":
         print("We'll generate a password for you...")
+        include_digits = input("Would you like digits in your password? [y/n]: ").lower()
+        include_symbols = input("would you like symbols in your password? [y/n]:").lower()
+
+        #random_digit = random.choice(digits)  # Pick a random digit from digits
+        #random_symbols = random.choice(symbols)  # Pick a random symbol from symbols
+        #random_letter = random.choice(letters)  # Pick a random letter from letters
+        #random_characters_combo = random.choice(characters_combo)
         # random module for this
     else:
-        new_pass = input("Enter a new password: ")
+        print("Invalid choice.")
 
     # open accounts.txt file to write and append at the end
 
