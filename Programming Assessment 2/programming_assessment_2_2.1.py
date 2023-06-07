@@ -1,3 +1,4 @@
+# Alexander Dexter 7/06/23 Authentication Program
 import time
 import random
 import string
@@ -53,22 +54,35 @@ elif user_choice == "r":
     print("Would you like to enter a new password (1) or have one generated for you (2)?")
     password_option = input("1 or 2?: ")
     if password_option == "1":
-        new_pass= input("Enter your custom password: ")
+        new_pass = input("Enter your custom password: ")
     elif password_option == "2":
         print("We'll generate a password for you...")
+        include_letters = input("Would you like the password to include letters? [y/n] ").lower()
         include_digits = input("Would you like digits in your password? [y/n]: ").lower()
-        include_symbols = input("would you like symbols in your password? [y/n]:").lower()
+        include_symbols = input("would you like symbols in your password? [y/n]: ").lower()
+        password_length = input("Enter the length of the password (or press enter to use the default (10): ") or 10
+        characters_combo = ""
+        if include_letters == "y":
+            characters_combo += string.ascii_letters
+        if include_digits == "y":
+            characters_combo += string.digits
+        if include_symbols == "y":
+            characters_combo += string.punctuation
 
-        #random_digit = random.choice(digits)  # Pick a random digit from digits
-        #random_symbols = random.choice(symbols)  # Pick a random symbol from symbols
-        #random_letter = random.choice(letters)  # Pick a random letter from letters
-        #random_characters_combo = random.choice(characters_combo)
-        # random module for this
+        # Repeat the action of picking a random character at a time to construct a password
+        for character in range(int(password_length)):
+            # pick a random choice of a character from the combination the user chose (letters/digits/symbols)
+            a_character = random.choice(characters_combo)
+            # add or append each newly picked character to the password to construct it
+            new_pass += a_character
+
+        print("Your Generated Password is: ", new_pass)
+
     else:
         print("Invalid choice.")
-
-    # open accounts.txt file to write and append at the end
-
+    file_out = open("accounts.txt", "a")
+    file_out.write(f"{new_user} {new_pass}\n")
+    file_out.close()
 
 elif user_choice == "v":
     view_accounts()

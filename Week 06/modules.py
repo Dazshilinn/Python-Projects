@@ -15,7 +15,7 @@ print("Digits:", digits)
 print("Symbols:", symbols)
 print("Characters Combo:", characters_combo)
 
-orandom_digit = random.choice(digits)  # Pick a random digit from digits
+random_digit = random.choice(digits)  # Pick a random digit from digits
 random_symbols = random.choice(symbols)  # Pick a random symbol from symbols
 random_letter = random.choice(letters)  # Pick a random letter from letters
 random_characters_combo = random.choice(characters_combo)  # Pick a random character
