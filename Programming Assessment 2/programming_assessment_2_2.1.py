@@ -34,8 +34,8 @@ print(MENU)
 user_choice = input("Choose [l/q/r/v]: ")
 
 if user_choice == "l":
-    entered_username = input("Enter you're username:")
-    entered_password = input("Enter you're password:")
+    entered_username = input("Enter your username:")
+    entered_password = input("Enter your password:")
     # the accounts_dictionary up till the entered_username is a value that I have given the key
     if entered_username in accounts and accounts[entered_username] == entered_password:
         print("Logging you in. ")
@@ -51,6 +51,7 @@ elif user_choice == "q":
 elif user_choice == "r":
     new_user = input("Register new username:")
     new_pass = ""
+    # the new_pass is a variable that will gather data to be placed into it from the lower code
     print("Would you like to enter a new password (1) or have one generated for you (2)?")
     password_option = input("1 or 2?: ")
     if password_option == "1":
@@ -62,6 +63,7 @@ elif user_choice == "r":
         include_symbols = input("would you like symbols in your password? [y/n]: ").lower()
         password_length = input("Enter the length of the password (or press enter to use the default (10): ") or 10
         characters_combo = ""
+        # characters_combo variable will now gather all the input data from the following user inputs
         if include_letters == "y":
             characters_combo += string.ascii_letters
         if include_digits == "y":
@@ -84,10 +86,9 @@ elif user_choice == "r":
     file_out.write(f"{new_user} {new_pass}\n")
     file_out.close()
 
+
 elif user_choice == "v":
     view_accounts()
 
 else:
     print("Invalid choice")
-    # def login(username, password):
-    """A function to check if the provided username and password are valid."""
